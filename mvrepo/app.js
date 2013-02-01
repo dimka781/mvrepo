@@ -12,4 +12,4 @@ var server = http.createServer(function (req, res) {
 console.log("host="+host+" ; port="+port+":process.env.VMC_APP_PORT="+process.env.VMC_APP_PORT+" ; process.env.VMC_APP_PORT="+process.env.VMC_APP_PORT);
 console.log("Running");
 
-server.listen(port, host);
+server.listen(8080);
