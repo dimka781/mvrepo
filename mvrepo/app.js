@@ -1,15 +1,23 @@
-var http = require('http');
-var util = require('util');
-
-var port = (process.env.VMC_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
-
-var server = http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-});
-
-console.log("host="+host+" ; port="+port+":process.env.VMC_APP_PORT="+process.env.VMC_APP_PORT+" ; process.env.VMC_APP_PORT="+process.env.VMC_APP_PORT);
-console.log("Running");
-
-server.listen(8080);
+    // Load the necessary servers.
+    var sys = require( "sys" );
+    var http = require( "http" );
+     
+    // Create our HTTP server.
+    var server = http.createServer(
+    function( request, response ){
+     
+     
+    // Create a SUPER SIMPLE response.
+    response.writeHead( 200, {"content-type": "text/plain"} );
+    response.write( "Hellow world from AWS!\n" );
+    response.end();
+     
+     
+    }
+    );
+     
+    // Point the HTTP server to port 8080.
+    server.listen( 8080 );
+     
+    // For logging....
+    sys.puts( "Server is running on 8080" );
