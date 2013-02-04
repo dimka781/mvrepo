@@ -19,4 +19,6 @@ chmod +x $source_dir/stop
 
 #start mvapp
 echo "Start MV app"
+echo $source_dir
+echo $gitrepo
 $source_dir/start
