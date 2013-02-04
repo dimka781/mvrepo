@@ -2,14 +2,21 @@ gitrepo="/home/ec2-user/mvapp"
 source_dir="$gitrepo/mvrepo"
 
 #stop mv app
+echo "Stop MV app"
 $source_dir/stop
 
-# get latest code from Git Repository
+# get the latest code from Git Repository
+echo "get the latest code from Git Repository"
 cd $gitrepo
 git reset --hard HEAD
 git clean -f -d
 git pull
 
 # Give execute permissions to the files
+echo "Give execute permissions to the files"
 chmod +x $source_dir/start
 chmod +x $source_dir/stop
+
+#start mvapp
+echo "Start MV app"
+$source_dir/start
