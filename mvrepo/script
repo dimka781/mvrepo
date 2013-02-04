@@ -1,4 +1,4 @@
-gitrepo="/home/ec2-user/mvapp/"
+gitrepo="/home/ec2-user/mvapp"
 source_dir="$gitrepo/mvrepo"
 $source_dir/stop
 cd $gitrepo
