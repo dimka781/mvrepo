@@ -20,7 +20,5 @@ chmod +x $source_dir/stop
 #start mvapp
 echo "Start MV app"
 
-echo $source_dir
-
 cd $source_dir
 ./start
